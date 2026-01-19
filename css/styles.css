@@ -1,0 +1,89 @@
+/* Relaxed Light Theme Variables */
+:root {
+  --bg-color: #f4f2f0;    /* Soft warm grey */
+  --text-main: #2d2d2d;   /* Off-black for readability */
+  --accent: #b58d5a;      /* Muted bronze/gold */
+  --card-bg: #ffffff;
+}
+
+body.light-theme {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 8%;
+  align-items: center;
+}
+
+nav ul { display: flex; list-style: none; gap: 40px; align-items: center; padding: 0; }
+nav ul li a, .back-link { 
+  text-decoration: none; 
+  color: var(--text-main); 
+  font-size: 14px; 
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.enquire-btn {
+  border: 1px solid var(--text-main);
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.enquire-btn:hover {
+  background-color: var(--text-main);
+  color: white !important;
+}
+
+/* About Layout */
+.about-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 8%;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.founder-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px; /* Slight roundness for a relaxed feel */
+  filter: grayscale(20%); /* Optional: softens the photo further */
+}
+
+.section-tag {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 3.5rem; margin-top: 0; font-weight: 500; }
+
+.bio {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .about-content { grid-template-columns: 1fr; text-align: center; }
+  h1 { font-size: 2.5rem; }
+}
